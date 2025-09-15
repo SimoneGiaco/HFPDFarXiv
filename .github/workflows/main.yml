@@ -1,0 +1,23 @@
+name: Gradio deployment with HuggingFace
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch_depth: 0
+      - name: Add remote
+        env: # Set the secret as an input
+          token_hf: ${{ secrets.HF_TOKEN }}
+        run: git remote add space https://SimoneGiacomelli:$token_hf@huggingface.co/spaces/SimoneGiacomelli/PDFarXivApp
+      - name: Add remote
+        env: # Set the secret as an input
+          token_hf: ${{ secrets.HF_TOKEN }}
+        run: git push --force https://SimoneGiacomelli:$token_hf@huggingface.co/spaces/SimoneGiacomelli/PDFarXivApp main
