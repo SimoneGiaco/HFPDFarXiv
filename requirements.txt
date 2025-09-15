@@ -1,0 +1,11 @@
+ipython==9.5.0
+llama-cpp-python==0.3.16
+langchain==0.3.27
+langchain_community==0.3.29
+gradio==5.45.0
+chromadb==1.0.21
+black
+pylint
+pytest
+pytest-cov
+requests==2.32.5
