@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch_depth: 0
+          fetch-depth: 0
       - name: Add remote
         env: # Set the secret as an input
           token_hf: ${{ secrets.HF_TOKEN }}
