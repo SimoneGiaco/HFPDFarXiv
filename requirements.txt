@@ -4,8 +4,8 @@ langchain==0.3.27
 langchain_community==0.3.29
 gradio==5.45.0
 chromadb==1.0.21
-black
-pylint
-pytest
-pytest-cov
+black==25.1.0
+pylint==3.3.8
+pytest==8.4.2
+pytest-cov==7.0.0
 requests==2.32.5
